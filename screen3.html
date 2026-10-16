@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="author" content="Pavithra - Frontend Assessment">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citigold Private Client | Frontend Assessment Demo by Pavithra</title>
+  <meta name="description" content="Discover how new funds and wealth growth can add up with Citigold Private Client cash rebates and exclusive privileges.">
+  
+  <!-- Google Fonts: Cormorant Garamond & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="screen3.css">
+</head>
+<body>
+
+  <!-- ================= TOP HEADER & NAVIGATION ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-top-bar">
+      <div class="header-container">
+        <a href="#" class="brand-logo" aria-label="Citi Wealth Home">
+          <!-- Citi Wealth Official Logo -->
+          <img src="assets/icons/image 1193.png" alt="Citi Wealth" class="citi-wealth-logo-img" fetchpriority="high" decoding="async">
+        </a>
+        <div class="header-top-right">
+          <span class="top-tier-tag">Citigold<sup>®</sup> Private Client</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <nav class="main-navigation" aria-label="Main Navigation">
+      <div class="header-container nav-container">
+        <ul class="nav-links">
+          <li><a href="#wealth" class="nav-link active">Wealth</a></li>
+          <li><a href="#banking" class="nav-link">Banking</a></li>
+          <li><a href="#invest" class="nav-link">Invest</a></li>
+          <li><a href="#insurance" class="nav-link">Insurance</a></li>
+          <li><a href="#credit-cards" class="nav-link">Credit Cards</a></li>
+          <li><a href="#loans" class="nav-link">Loans</a></li>
+          <li><a href="#mortgage" class="nav-link">Mortgage</a></li>
+          <li><a href="#services-help" class="nav-link">Services & Help</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <div class="ask-ai-pill-box" id="askAiBtn" role="button" tabindex="0" aria-label="Ask AI Assistant">
+            <span class="ask-ai-label">Ask AI</span>
+            <span class="ask-ai-sep"></span>
+            <div class="ask-ai-icon-group">
+              <span class="ai-circle-dot dot-green" title="AI Model 1"></span>
+              <span class="ai-circle-dot dot-orange" title="AI Model 2"></span>
+              <img src="assets/icons/image 6.png" alt="AI Icon" class="ai-asset-icon" loading="lazy" decoding="async">
+              <img src="assets/icons/image 7.png" alt="AI Spark" class="ai-asset-icon" loading="lazy" decoding="async">
+              <img src="assets/icons/image 8.png" alt="AI Reset" class="ai-asset-icon" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <a href="#portal-demo" class="btn-logon">PORTAL DEMO</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= SECTION 1: HERO BANNER ================= -->
+    <section class="hero-section" id="heroSection">
+      <div class="hero-background-wrapper">
+        <img src="assets/images/image 1.png" alt="Citigold Private Client Hero" class="hero-bg-img" fetchpriority="high" decoding="async">
+        <div class="hero-gradient-overlay"></div>
+      </div>
+
+      <!-- Left Decorative Gold Citi Branding -->
+      <div class="hero-gold-citi-graphic" aria-hidden="true">
+        <svg viewBox="0 0 120 480" width="105" height="420" fill="none" class="gold-citi-svg">
+          <!-- C -->
+          <path d="M110 32H28C12.5 32 0 44.5 0 60V80C0 95.5 12.5 108 28 108H110V82H32C27 82 23 78 23 73V67C23 62 27 58 32 58H110V32Z" fill="#a48243"/>
+          <!-- I -->
+          <path d="M0 136H24V220H0V136Z" fill="#a48243"/>
+          <!-- T -->
+          <path d="M0 248H110V274H67V356H43V274H0V248Z" fill="#a48243"/>
+          <!-- I with bottom curve -->
+          <path d="M0 384H24V444C24 459 36 470 52 470H96V494H50C22 494 0 472 0 444V384Z" fill="#a48243"/>
+        </svg>
+      </div>
+
+      <div class="hero-content-container">
+        <div class="hero-text-card">
+          <p class="hero-eyebrow">CITIGOLD PRIVATE CLIENT</p>
+          <h1 class="hero-heading">
+            OPEN A CITIGOLD<br>
+            PRIVATE CLIENT
+          </h1>
+          <p class="hero-rebate-text">
+            ACCOUNT TO ENJOY UP TO<br>
+            <strong>HK$170,000 CASH REBATE</strong>
+          </p>
+          <div class="hero-cta-wrapper">
+            <a href="#apply" class="btn-primary-apply">APPLY NOW</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 2: WEALTH GROWTH ADD UP (3RD IMAGE INSTEAD OF 4TH) ================= -->
+    <section class="wealth-growth-section" id="wealthGrowthSection">
+      <div class="wealth-growth-container">
+        <div class="wealth-growth-banner">
+          
+          <!-- Left Column with Dark Background & Luxury Typography -->
+          <div class="wealth-growth-left">
+            <div class="wealth-growth-bg-overlay"></div>
+            <div class="wealth-growth-content">
+              <!-- Rising Arrows Growth Icon -->
+              <div class="growth-arrows-icon" aria-hidden="true">
+                <svg viewBox="0 0 36 36" width="36" height="36" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="28" y1="32" x2="28" y2="14"/>
+                  <polyline points="22 20 28 14 34 20"/>
+                  <line x1="8" y1="32" x2="8" y2="4"/>
+                  <polyline points="2 10 8 4 14 10"/>
+                  <line x1="18" y1="32" x2="18" y2="22"/>
+                </svg>
+              </div>
+
+              <h2 class="wealth-growth-heading">
+                HOW NEW FUNDS<br>
+                AND WEALTH<br>
+                GROWTH CAN<br>
+                ADD UP
+              </h2>
+
+              <p class="wealth-growth-subtext">
+                Here's how much you can earn by bringing in new funds or by growing your net insurance or investment balance:
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Stacked White Tables -->
+          <div class="wealth-growth-right">
+            
+            <!-- Table 1: New Fund Amount -->
+            <div class="growth-table-card">
+              <table class="growth-data-table">
+                <thead>
+                  <tr>
+                    <th scope="col">New Fund Amount</th>
+                    <th scope="col" class="text-right">Cash Rebate</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>HK$40,000,000 or above</td>
+                    <td class="text-right">HK$160,000</td>
+                  </tr>
+                  <tr>
+                    <td>HK$30,000,000- HK$39,999,999</td>
+                    <td class="text-right">HK$120,000</td>
+                  </tr>
+                  <tr>
+                    <td>HK$15,000,000- HK$29,999,999</td>
+                    <td class="text-right">HK$60,000</td>
+                  </tr>
+                  <tr>
+                    <td>HK$8,000,000- HK$14,999,999</td>
+                    <td class="text-right">HK$40,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Table 2: Net Investment and Insurance Balance Growth -->
+            <div class="growth-table-card">
+              <table class="growth-data-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Net Investment and Insurance Balance Growth</th>
+                    <th scope="col" class="text-right">Rewards</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>HK$10,000,000 or above</td>
+                    <td class="text-right">HK$90,000</td>
+                  </tr>
+                  <tr>
+                    <td>HK$8,000,000 - HK$9,999,999</td>
+                    <td class="text-right">HK$65,000</td>
+                  </tr>
+                  <tr>
+                    <td>HK$5,000,000 - HK$7,999,999</td>
+                    <td class="text-right">HK$35,000</td>
+                  </tr>
+                  <tr>
+                    <td>HK$3,000,000 - HK$4,999,999</td>
+                    <td class="text-right">HK$18,000</td>
+                  </tr>
+                  <tr>
+                    <td>HK$1,000,000 - HK$2,999,999</td>
+                    <td class="text-right">HK$6,000</td>
+                  </tr>
+                  <tr>
+                    <td>HK$500,000 - HK$999,999</td>
+                    <td class="text-right">HK$3,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 3: WEALTH MANAGEMENT / SOLUTIONS ================= -->
+    <section class="solutions-section" id="solutionsSection">
+      <div class="solutions-container">
+        <header class="section-serif-header">
+          <h2 class="serif-title">
+            CITI GLOBAL WEALTH MANAGEMENT PROVIDES YOU ONE STOP SOLUTION WITH INVESTMENT, MORTGAGE AND PROTECTION PLAN TO BUILD WEALTH WITH STABILITY.
+          </h2>
+        </header>
+
+        <div class="solutions-grid" id="solutionsSlider">
+          <!-- Column 1: Trusted Advisory -->
+          <article class="solution-column">
+            <div class="solution-img-box">
+              <img src="assets/images/image 1195.png" alt="Trusted Senior Banker Advisory" class="solution-img" loading="lazy" decoding="async">
+            </div>
+            <div class="solution-body">
+              <h3 class="solution-heading">TRUSTED ADVISORY</h3>
+              <p class="solution-text">
+                Your dedicated Senior Banker is backed by a team of specialists (Investment, Insurance, Treasury, Mortgage) to provide you with insights, analysis and investment strategies. You can even schedule a video-conference session with your Senior Banker and Investment Specialist for a remote portfolio review via Citi Live Chat. They will share market information with you via your screen-sharing function, helping to build your wealth portfolio without meeting in person.
+              </p>
+            </div>
+          </article>
+
+          <div class="solution-col-divider" aria-hidden="true"></div>
+
+          <!-- Column 2: Citigold Private Client Debit Mastercard -->
+          <article class="solution-column">
+            <div class="solution-img-box debit-card-img-box">
+              <img src="assets/images/debit-card-lifestyle.jpg" alt="Citigold Private Client Lifestyle" class="solution-img" loading="lazy" decoding="async">
+            </div>
+            <div class="solution-body">
+              <h3 class="solution-heading">CITIGOLD<sup>®</sup> PRIVATE CLIENT DEBIT MASTERCARD<sup>®</sup></h3>
+              <p class="solution-text">
+                Enjoy access to a broad range of meticulously crafted privileges and priceless experiences* designed to elevate your lifestyle experience with us at home or wherever in the world you may travel.
+              </p>
+              <ul class="solution-checkmarks-list">
+                <li>
+                  <svg class="check-svg-icon" viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                  <span>24/7 Dedicated Travel and Lifestyle Concierge</span>
+                </li>
+                <li>
+                  <svg class="check-svg-icon" viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                  <span>Complimentary Airport Lounge Access</span>
+                </li>
+                <li>
+                  <svg class="check-svg-icon" viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                  <span>Enhanced APAC Golf Program</span>
+                </li>
+                <li>
+                  <svg class="check-svg-icon" viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                  <span>Extra Rewards on Daily Purchases</span>
+                </li>
+                <li>
+                  <svg class="check-svg-icon" viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                  <span>Travel At Ease with Citibank Global Wallet</span>
+                </li>
+              </ul>
+              <a href="#mastercard-details" class="solution-link">
+                <span>MORE DETAILS</span>
+                <svg class="arrow-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 10h12M11 5l5 5-5 5"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <div class="solution-col-divider" aria-hidden="true"></div>
+
+          <!-- Column 3: Advisory Tool -->
+          <article class="solution-column">
+            <div class="solution-img-box">
+              <img src="assets/images/Rectangle 11.png" alt="Total Wealth Advisor Tool" class="solution-img" loading="lazy" decoding="async">
+            </div>
+            <div class="solution-body">
+              <h3 class="solution-heading">ADVISORY TOOL</h3>
+              <p class="solution-text">
+                The Total Wealth Advisor is our latest goal-based, financial advisory tool which provides a real-time picture of your financial situation and global investments, and analyses how your portfolio value changes over time and the likelihood of achieving your life goals.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Carousel Pagination Dots -->
+        <div class="carousel-dots-wrapper" role="tablist" aria-label="Solutions pagination">
+          <button class="carousel-dot active" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+          <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 4: OFFERS & REBATES ================= -->
+    <section class="offers-section" id="offersSection">
+      <div class="offers-container">
+        <header class="section-serif-header">
+          <h2 class="serif-title">
+            BEGIN YOUR CITIGOLD PRIVATE CLIENT JOURNEY TO ENJOY OUR PRESTIGIOUS WELCOMES OFFERS
+          </h2>
+          <p class="section-subtitle">
+            Successfully opened a Citigold Private Client account to enjoy fabulous welcome offers
+          </p>
+        </header>
+
+        <!-- Offer Tabs -->
+        <div class="offer-tabs-nav" role="tablist">
+          <button class="offer-tab-btn active" role="tab" id="tab-welcome" aria-controls="panel-welcome" aria-selected="true" data-target="panel-welcome">
+            WELCOME OFFERS
+          </button>
+          <button class="offer-tab-btn" role="tab" id="tab-referral" aria-controls="panel-referral" aria-selected="false" data-target="panel-referral">
+            REFERRAL REWARDS
+          </button>
+          <button class="offer-tab-btn" role="tab" id="tab-other" aria-controls="panel-other" aria-selected="false" data-target="panel-other">
+            OTHER OFFERS
+          </button>
+        </div>
+
+        <!-- Tab Panel: Welcome Offers -->
+        <div class="offer-tab-panel active" id="panel-welcome" role="tabpanel" aria-labelledby="tab-welcome">
+          <div class="panel-inner-box">
+            
+            <!-- Top Tables Row (2 cards side by side) -->
+            <div class="tables-row-grid">
+              
+              <!-- Card 1: New Funds Offer -->
+              <div class="offer-table-card">
+                <div class="table-card-header">
+                  <div class="offer-header-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                      <line x1="12" y1="18" x2="12.01" y2="18"/>
+                      <path d="M8 6h8M8 10h8"/>
+                    </svg>
+                  </div>
+                  <h3 class="table-card-title">New Funds Offer</h3>
+                </div>
+                
+                <table class="rebate-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">NEW FUND AMOUNT</th>
+                      <th scope="col" class="text-right">CASH REBATE</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>HK$40,000,000 or above</td>
+                      <td class="rebate-amount text-right">HK$160,000</td>
+                    </tr>
+                    <tr>
+                      <td>HK$30,000,000- HK$39,999,999</td>
+                      <td class="rebate-amount text-right">HK$120,000</td>
+                    </tr>
+                    <tr>
+                      <td>HK$15,000,000- HK$29,999,999</td>
+                      <td class="rebate-amount text-right">HK$60,000</td>
+                    </tr>
+                    <tr>
+                      <td>HK$8,000,000- HK$14,999,999</td>
+                      <td class="rebate-amount text-right">HK$40,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Card 2: Investment & Insurance Balance Offer -->
+              <div class="offer-table-card">
+                <div class="table-card-header">
+                  <div class="offer-header-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                      <circle cx="9" cy="7" r="4"/>
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                  </div>
+                  <h3 class="table-card-title">Investment & Insurance Balance Offer</h3>
+                </div>
+
+                <table class="rebate-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">NET INVESTMENT AND INSURANCE BALANCE GROWTH</th>
+                      <th scope="col" class="text-right">REWARDS</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>HK$10,000,000 or above</td>
+                      <td class="rebate-amount text-right">HK$90,000</td>
+                    </tr>
+                    <tr>
+                      <td>HK$8,000,000- HK$9,999,999</td>
+                      <td class="rebate-amount text-right">HK$65,000</td>
+                    </tr>
+                    <tr>
+                      <td>HK$5,000,000- HK$7,999,999</td>
+                      <td class="rebate-amount text-right">HK$35,000</td>
+                    </tr>
+                    <tr>
+                      <td>HK$3,000,000- HK$4,999,999</td>
+                      <td class="rebate-amount text-right">HK$18,000</td>
+                    </tr>
+                    <tr>
+                      <td>HK$1,000,000- HK$2,999,999</td>
+                      <td class="rebate-amount text-right">HK$6,000</td>
+                    </tr>
+                    <tr>
+                      <td>HK$500,000- HK$999,999</td>
+                      <td class="rebate-amount text-right">HK$3,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+
+            <!-- Bottom 3 Mini Feature Cards -->
+            <div class="mini-offers-grid">
+              <!-- Mini Card 1: Engagement Offer -->
+              <div class="mini-offer-card">
+                <div class="mini-card-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <polyline points="20 12 20 22 4 22 4 12"/>
+                    <rect x="2" y="7" width="20" height="5"/>
+                    <line x1="12" y1="22" x2="12" y2="7"/>
+                    <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/>
+                    <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
+                  </svg>
+                </div>
+                <h4 class="mini-card-title">ENGAGEMENT OFFER</h4>
+                <p class="mini-card-intro">
+                  Complete the followings to enjoy up to <strong>HK$1,000 cash rebate:</strong>
+                </p>
+                <ul class="mini-card-checklist">
+                  <li>
+                    <svg class="check-svg-icon" viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                    <span>Complete Investment Risk Profile Questionnaire</span>
+                  </li>
+                  <li>
+                    <svg class="check-svg-icon" viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                    <span>Activate Citi Debit Card</span>
+                  </li>
+                  <li>
+                    <svg class="check-svg-icon" viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                    <span>Login to Citi Mobile<sup>®</sup> App at least once</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Mini Card 2: Mortgage Offer -->
+              <div class="mini-offer-card">
+                <div class="mini-card-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                  </svg>
+                </div>
+                <h4 class="mini-card-title">MORTGAGE OFFER</h4>
+                <p class="mini-card-intro">
+                  Successfully draw down a mortgage loan will enjoy <strong>HK$8,000 cash rebate</strong>
+                </p>
+              </div>
+
+              <!-- Mini Card 3: Professional Investor Sign-up Offer -->
+              <div class="mini-offer-card">
+                <div class="mini-card-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                    <polyline points="10 9 9 9 8 9"/>
+                  </svg>
+                </div>
+                <h4 class="mini-card-title">PROFESSIONAL INVESTOR SIGN-UP OFFER</h4>
+                <p class="mini-card-intro">
+                  Complete the Professional Investor Declaration Form and Maintain Professional Investor status to enjoy up to <strong>HK$1,000 cash rebate</strong>
+                </p>
+              </div>
+            </div>
+
+            <!-- Disclaimers footer -->
+            <div class="panel-disclaimer">
+              <p>All offers are subject to terms and conditions. For details, please reach out to branch staff.</p>
+              <p>FX trading and investment involve risks, rates may go up or down.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tab Panel: Referral Rewards -->
+        <div class="offer-tab-panel" id="panel-referral" role="tabpanel" aria-labelledby="tab-referral" hidden>
+          <div class="panel-inner-box">
+            <!-- Referral Hero Banner with Floating Text Box -->
+            <div class="referral-banner-card">
+              <img src="assets/images/image 1232 1.png" alt="Referral Rewards" class="referral-banner-img" fetchpriority="high" decoding="async">
+              <div class="referral-floating-box">
+                <p>
+                  Refer your family and friends to join Citigold Private Client or Citigold and earn up to <strong>HK$12,800 cash rebate</strong> for each successful referral. The more you refer, the more you can earn!
+                </p>
+              </div>
+            </div>
+
+            <!-- Referral Rewards 3-Column Table -->
+            <div class="referral-table-wrapper">
+              <div class="referral-col-card">
+                <div class="referral-col-header">Referee’s Banking Account Opened</div>
+                <div class="referral-col-cell">Citigold Private Client</div>
+                <div class="referral-col-cell">Citigold</div>
+              </div>
+              <div class="referral-col-card">
+                <div class="referral-col-header">Referee’s Banking Account Designated Balance</div>
+                <div class="referral-col-cell">HK$8,000,000 or above</div>
+                <div class="referral-col-cell">HK$1,500,000 or above</div>
+              </div>
+              <div class="referral-col-card">
+                <div class="referral-col-header">Cash Rebate to Referrer for Each Successful Referral</div>
+                <div class="referral-col-cell referral-val">HK$12,800</div>
+                <div class="referral-col-cell referral-val">HK$2,088</div>
+              </div>
+            </div>
+
+            <div class="panel-disclaimer">
+              <p>All offers are subject to terms and conditions. For details, please reach out to branch staff.</p>
+              <p>FX trading and investment involve risks, rates may go up or down.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab Panel: Other Offers -->
+        <div class="offer-tab-panel" id="panel-other" role="tabpanel" aria-labelledby="tab-other" hidden>
+          <div class="panel-inner-box">
+            <div class="other-offers-grid">
+              <!-- Card 1: Foreign Exchange -->
+              <div class="other-offer-card">
+                <div class="other-offer-img-box">
+                  <img src="assets/images/Rectangle 11 (3).png" alt="Foreign Exchange" class="other-offer-img" loading="lazy" decoding="async">
+                </div>
+                <div class="other-offer-body">
+                  <h3 class="other-offer-title">FOREIGN EXCHANGE</h3>
+                  <p class="other-offer-desc">
+                    Enjoy 0% spread for every successful FX transactions via Citi Mobile<sup>®</sup> App or Citibank Online within the first 6 calendar months from account opening
+                  </p>
+                  <a href="#learn-more-fx" class="other-offer-link">
+                    <span>LEARN MORE</span>
+                    <svg class="arrow-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 10h12M11 5l5 5-5 5"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Card 2: Stock -->
+              <div class="other-offer-card">
+                <div class="other-offer-img-box">
+                  <img src="assets/images/Rectangle 43.png" alt="Stock" class="other-offer-img" loading="lazy" decoding="async">
+                </div>
+                <div class="other-offer-body">
+                  <h3 class="other-offer-title">STOCK</h3>
+                  <p class="other-offer-desc">
+                    Enjoy HK & US Stock 3-month Brokerage Buy Fee Waiver.
+                  </p>
+                  <a href="#learn-more-stock" class="other-offer-link">
+                    <span>LEARN MORE</span>
+                    <svg class="arrow-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 10h12M11 5l5 5-5 5"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel-disclaimer">
+              <p>All offers are subject to terms and conditions. For details, please reach out to branch staff.</p>
+              <p>FX trading and investment involve risks, rates may go up or down.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 5: FREQUENTLY ASKED QUESTION ================= -->
+    <section class="faq-page" id="faqSection">
+      <div class="faq-container">
+        <h2 class="faq-heading">FREQUENTLY ASKED QUESTION</h2>
+        <div id="faqCategories" class="faq-categories">
+          <!-- Category 1: Application via Citi Mobile┬« App -->
+          <section class="category">
+            <button class="category-button" type="button" aria-expanded="false">
+              <span>Application via Citi Mobile┬« App</span>
+              <span class="category-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="category-content">
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>What is remote account opening?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>Remote account opening allows you to apply for a banking account online without visiting a branch. You can complete the application through the available Citi digital channels.</p>
+                </div>
+              </div>
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>Why should I apply for a banking account via Citi Mobile┬« App?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>You can conveniently complete the application online and use Citi Mobile┬« App to continue the application process. Please refer to the bank's official information for the applicable eligibility criteria.</p>
+                </div>
+              </div>
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>How can I apply for a banking account via Citi Mobile┬« App?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>Complete the online application form and follow the instructions in Citi Mobile┬« App to continue the banking account application process.</p>
+                </div>
+              </div>
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>Is there any charge for applying for a banking account via Citi Mobile┬« App?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>Please refer to the bank's official terms and conditions for information about any charges related to the account you are applying for.</p>
+                </div>
+              </div>
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>Why do I need to take photo of my HKID card from multiple angles?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>Taking photos from the requested angles helps the system capture the necessary details of your HKID card for identity verification.</p>
+                </div>
+              </div>
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>Why do I need to take a selfie and blink my eyes twice?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>The selfie and blinking instructions are part of the identity verification process. Follow the on-screen instructions and make sure your face is clearly visible.</p>
+                </div>
+              </div>
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>Do I need to upload any document, e.g. Address proof?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>Any additional documents required will depend on the application and verification process. Follow the instructions displayed during your application.</p>
+                </div>
+              </div>
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>Is my application information secure and protected?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>Please refer to the bank's official privacy policy and security information to understand how your application information is handled and protected.</p>
+                </div>
+              </div>
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>Why have I failed the identity verification and need to visit branch to complete the application?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>If identity verification cannot be completed successfully online, you may be asked to visit a branch to complete the application process.</p>
+                </div>
+              </div>
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>Why do I need to input my personal information to apply for a banking account?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>You will need to input your latest personal information for Citibank's record during your banking account application process.</p>
+                </div>
+              </div>
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>Do I need to open an account during business hours?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>There are no time or place restrictions on opening your banking account. You simply complete the application form online and download Citi Mobile┬« App to complete the rest of the application, anytime and anywhere. It takes a minimum of 10 minutes to complete the application process if you meet the application criteria. (According to our usability test, the majority of participants completed the application of banking account within 10 mins.)</p>
+                </div>
+              </div>
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>What's a one-time password?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>A one-time password (OTP) is a verification code used during an authentication process. Follow the instructions provided through the bank's official channels.</p>
+                </div>
+              </div>
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>What do I have to be aware of during the registration for facial recognition?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>Follow the on-screen instructions carefully. Make sure your face is clearly visible and that the surrounding lighting is suitable for the identity verification process.</p>
+                </div>
+              </div>
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>How can I resume my application?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>Follow the instructions provided in Citi Mobile┬« App or through the bank's official application channels to check whether you can resume your previous application.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Category 2: Online Banking Username / Password -->
+          <section class="category">
+            <button class="category-button" type="button" aria-expanded="false">
+              <span>Online Banking Username / Password</span>
+              <span class="category-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="category-content">
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>What if I forget my Online Banking Username / Password?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>Use the official Citibank Online or Citi Mobile┬« App recovery options to retrieve your username or reset your password. Follow the instructions shown on the official banking service.</p>
+                </div>
+              </div>
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>Do I need to create Online Banking Username / Password if I have already registered?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>If you have already registered for online banking, follow the instructions provided during the application process to use your existing credentials where applicable.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Category 3: Banking account services -->
+          <section class="category">
+            <button class="category-button" type="button" aria-expanded="false">
+              <span>Banking account services</span>
+              <span class="category-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="category-content">
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>How can I update my account information after the account is successfully opened?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>Please use the bank's official online banking services or contact customer support for instructions on updating your account information.</p>
+                </div>
+              </div>
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>If I am an existing Citi credit card customer, how should I proceed to open a Citigold account?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>Follow the official account opening instructions and provide the requested information during the application process.</p>
+                </div>
+              </div>
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>Will the banker contact me after opening the account?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>Any follow-up arrangements depend on your application and account service. Please refer to the bank's official confirmation for details.</p>
+                </div>
+              </div>
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>After my account is successfully opened, when will I receive the ATM card?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>The ATM card will be dispatched upon the account being successfully opened. Normally you will receive the ATM card within 3 to 5 working days, excluding Saturdays, Sundays and public holidays.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Category 4: ATM Card Activation and PIN set up -->
+          <section class="category">
+            <button class="category-button" type="button" aria-expanded="false">
+              <span>ATM Card Activation and PIN set up</span>
+              <span class="category-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="category-content">
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>How can I activate the ATM card and set up ATM PIN?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>You can activate your ATM card via Citibank Online or Citi Mobile┬« App by following the steps below:</p>
+                  <p>Citibank Online:<br>i. Login to Citibank Online<br>ii. Click on ΓÇÿServicesΓÇÖ and 'My Profile'<br>iii. Select ΓÇÿActivate ATM/Debit/Credit CardΓÇÖ<br>iv. Follow the instructions and submit the request with One Time Password</p>
+                  <p>Citi Mobile┬« App:<br>i. Login to Citi Mobile┬« App<br>ii. Click on ΓÇÿProfile&SettingsΓÇÖ<br>iii. Select ΓÇÿActivate ATM/DebitΓÇÖ<br>iv. Follow the instructions and submit the request with One Time Password</p>
+                </div>
+              </div>
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>Is there any deadline for activating the ATM card and setting up ATM PIN?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>Please refer to the instructions provided with your card or contact the bank through its official customer service channels for the applicable deadline.</p>
+                </div>
+              </div>
+              <div class="question-item">
+                <button class="question-button" type="button" aria-expanded="false">
+                  <span>What if I forget the ATM PIN?</span>
+                  <span class="question-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="answer">
+                  <p>Use the bank's official card services to check the available ATM PIN reset options.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= OFFICIAL CITI FOOTER ================= -->
+  <footer class="citi-footer-dark">
+    <div class="citi-footer-container">
+      <!-- Footer Citi Logo -->
+      <div class="footer-citi-logo-box">
+        <img src="assets/icons/citi-white-logo.png" alt="Citi" class="footer-citi-logo-img" fetchpriority="high" decoding="async">
+      </div>
+
+      <!-- 5-Column Navigation Grid -->
+      <div class="citi-footer-columns">
+        <!-- Col 1 -->
+        <div class="citi-footer-column">
+          <h4 class="citi-footer-col-title">TERMS AND CONDITIONS</h4>
+          <ul class="citi-footer-links-list">
+            <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#disclaimers">Disclaimers</a></li>
+            <li><a href="#notices">Notices</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="citi-footer-column">
+          <h4 class="citi-footer-col-title">SECURITY</h4>
+          <ul class="citi-footer-links-list">
+            <li><a href="#security-tips">Security Tips</a></li>
+            <li><a href="#fraud">Credit Card and Fraud</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="citi-footer-column">
+          <h4 class="citi-footer-col-title">BANKING INFORMATION</h4>
+          <ul class="citi-footer-links-list">
+            <li><a href="#fees">Fees & Rates</a></li>
+            <li><a href="#forms">Application Forms</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4 -->
+        <div class="citi-footer-column">
+          <h4 class="citi-footer-col-title">ABOUT CITI</h4>
+          <ul class="citi-footer-links-list">
+            <li><a href="#about-citi">About Citi in Singapore</a></li>
+            <li><a href="#community">Supporting the Community</a></li>
+            <li><a href="#newsroom">Newsroom</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#education">Financial Education</a></li>
+            <li><a href="#philanthropy">Philanthropy</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5 -->
+        <div class="citi-footer-column">
+          <h4 class="citi-footer-col-title">CONTACT US</h4>
+          <ul class="citi-footer-links-list">
+            <li><a href="#contact-info">Contact Information</a></li>
+            <li><a href="#atm-locator">Wealth Centre & ATM Locator</a></li>
+            <li><a href="#find-citi">Find My Citi</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="citi-footer-divider"></div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="citi-footer-bottom-bar">
+        <div class="footer-app-download">
+          <span class="footer-bottom-label">DOWNLOAD THE CITI MOBILE<sup>®</sup> APP</span>
+          <div class="app-store-badges">
+            <!-- Google Play Badge -->
+            <a href="#google-play" class="store-badge-btn" aria-label="Get it on Google Play">
+              <svg viewBox="0 0 135 40" width="135" height="40">
+                <rect width="135" height="40" rx="5" fill="#000" stroke="#a6a6a6" stroke-width="1"/>
+                <path d="M14 10.5L24 20L14 29.5V10.5Z" fill="#3DDC84"/>
+                <path d="M14 10.5L24 20L27.5 16.5L16.5 10.2C15.6 9.7 14.6 9.8 14 10.5Z" fill="#4285F4"/>
+                <path d="M14 29.5L24 20L27.5 23.5L16.5 29.8C15.6 30.3 14.6 30.2 14 29.5Z" fill="#EA4335"/>
+                <path d="M24 20L31 16L27.5 13.5L24 20Z" fill="#FBBC04"/>
+                <text x="36" y="16" fill="#fff" font-size="8" font-family="sans-serif">GET IT ON</text>
+                <text x="36" y="28" fill="#fff" font-size="12" font-weight="bold" font-family="sans-serif">Google Play</text>
+              </svg>
+            </a>
+            <!-- App Store Badge -->
+            <a href="#app-store" class="store-badge-btn" aria-label="Download on the App Store">
+              <svg viewBox="0 0 135 40" width="135" height="40">
+                <rect width="135" height="40" rx="5" fill="#000" stroke="#a6a6a6" stroke-width="1"/>
+                <path d="M22.5 18C22.5 15.5 24 14.2 24.1 14.1C23 12.5 21.2 12.2 20.6 12.2C19.1 12 17.7 13.1 16.9 13.1C16.1 13.1 14.9 12.2 13.7 12.2C12.1 12.2 10.6 13.1 9.8 14.5C8.1 17.5 9.4 21.8 11 24.2C11.8 25.3 12.7 26.6 13.9 26.5C15 26.4 15.5 25.8 16.8 25.8C18.1 25.8 18.5 26.5 19.7 26.5C20.9 26.5 21.7 25.3 22.5 24.2C23.4 22.9 23.8 21.6 23.8 21.5C23.7 21.4 22.5 21 22.5 18Z" fill="#fff"/>
+                <path d="M19.1 10.8C19.7 10 20.1 8.9 20 7.8C19 7.8 17.9 8.4 17.3 9.2C16.7 9.9 16.2 11 16.4 12.1C17.4 12.2 18.5 11.5 19.1 10.8Z" fill="#fff"/>
+                <text x="36" y="16" fill="#fff" font-size="7.5" font-family="sans-serif">Download on the</text>
+                <text x="36" y="28" fill="#fff" font-size="12" font-weight="bold" font-family="sans-serif">App Store</text>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="footer-social-follow">
+          <span class="footer-bottom-label">FOLLOW US ON</span>
+          <div class="social-icon-links">
+            <!-- Instagram -->
+            <a href="#instagram" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <!-- YouTube -->
+            <a href="#youtube" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"/>
+              </svg>
+            </a>
+            <!-- Facebook -->
+            <a href="#facebook" class="social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <!-- X (Twitter) -->
+            <a href="#x" class="social-link" aria-label="X">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="screen3.js"></script>
+</body>
+</html>

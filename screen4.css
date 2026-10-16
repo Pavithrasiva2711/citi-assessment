@@ -1,0 +1,759 @@
+/* =========================================================
+   CITIGOLD PRIVATE CLIENT - SCREEN 4 (PURE MOBILE VIEW)
+   Design System & Luxury Mobile Aesthetics
+   ========================================================= */
+
+:root {
+  --font-serif: 'Cormorant Garamond', Georgia, "Times New Roman", serif;
+  --font-sans: 'Inter', Arial, Helvetica, sans-serif;
+  
+  --citi-gold: #a48243;
+  --citi-gold-hover: #b8934d;
+  --citi-gold-dark: #8c6a28;
+  
+  --color-black: #05070a;
+  --color-dark-surface: #10141a;
+  --color-white: #ffffff;
+  --color-gray-bg: #f4f5f7;
+  --color-border: #e2e4e8;
+  --color-text-body: #333333;
+  --color-text-muted: #666666;
+
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.mobile-body {
+  font-family: var(--font-sans);
+  background-color: #1a1d24;
+  color: var(--color-black);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Central Mobile Device Canvas */
+.mobile-screen-wrapper {
+  width: 100%;
+  max-width: 440px;
+  background-color: #ffffff;
+  min-height: 100vh;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@media (max-width: 440px) {
+  body.mobile-body {
+    background-color: #ffffff;
+  }
+  .mobile-screen-wrapper {
+    box-shadow: none;
+  }
+}
+
+/* ================= MOBILE HEADER ================= */
+.mobile-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-citi-logo {
+  height: 22px;
+  width: auto;
+  display: block;
+}
+
+.mobile-tier-badge span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--citi-gold);
+}
+
+.mobile-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background-color: #fafafa;
+}
+
+/* Ask AI Pill */
+.mobile-ask-ai-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background-color: #ffffff;
+  border: 1px solid #d4d8de;
+  border-radius: 999px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.mobile-ask-ai-pill:hover {
+  border-color: var(--citi-gold);
+}
+
+.ask-ai-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #111111;
+}
+
+.ask-ai-sep {
+  width: 1px;
+  height: 10px;
+  background-color: #dcdcdc;
+}
+
+.ask-ai-dots {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dot-green {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #27ae60;
+}
+
+.dot-orange {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #f39c12;
+}
+
+.spark-icon {
+  width: 10px;
+  height: 10px;
+}
+
+.mobile-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-mobile-logon {
+  padding: 6px 14px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--color-black);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  border-radius: 2px;
+  transition: background-color var(--transition-fast);
+}
+
+.btn-mobile-logon:hover {
+  background-color: #333333;
+}
+
+.mobile-menu-btn {
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.menu-bar {
+  width: 20px;
+  height: 2px;
+  background-color: #111111;
+  transition: all var(--transition-fast);
+}
+
+/* Mobile Nav Drawer */
+.mobile-nav-drawer {
+  background-color: #111419;
+  padding: 16px 20px;
+  border-top: 1px solid #222;
+}
+
+.mobile-nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mobile-nav-links a {
+  color: #cccccc;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.mobile-nav-links a.active,
+.mobile-nav-links a:hover {
+  color: var(--citi-gold);
+  font-weight: 700;
+}
+
+/* ================= SECTION 1: HERO (MOBILE) ================= */
+.mobile-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 480px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.mobile-hero-img-box {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.mobile-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 65% center;
+}
+
+.mobile-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(5,7,10,0.75) 60%, rgba(5,7,10,0.92) 100%);
+}
+
+.mobile-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 24px 20px 32px;
+  color: #ffffff;
+}
+
+.mobile-hero-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--citi-gold);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.mobile-hero-title {
+  font-family: var(--font-serif);
+  font-size: 2.1rem;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.mobile-hero-rebate {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #dddddd;
+  margin-bottom: 20px;
+}
+
+.mobile-hero-rebate strong {
+  color: #ffffff;
+  font-size: 1.15rem;
+  display: block;
+}
+
+.btn-mobile-apply {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 14px 20px;
+  background-color: var(--citi-gold);
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 2px;
+  box-shadow: 0 4px 12px rgba(164, 130, 67, 0.35);
+  transition: background-color var(--transition-fast);
+}
+
+.btn-mobile-apply:hover {
+  background-color: var(--citi-gold-hover);
+}
+
+/* ================= SECTION 2: WEALTH GROWTH (MOBILE) ================= */
+.mobile-growth-section {
+  padding: 32px 16px;
+  background-color: #0b0f14;
+}
+
+.mobile-growth-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobile-growth-header {
+  color: #ffffff;
+}
+
+.growth-icon-box {
+  margin-bottom: 14px;
+  color: var(--citi-gold);
+}
+
+.mobile-growth-heading {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.mobile-growth-subtext {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #a2a8b2;
+}
+
+.mobile-tables-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.mobile-table-card {
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 16px 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-table-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #111111;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 10px;
+}
+
+.mobile-data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mobile-data-table th {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #777777;
+  letter-spacing: 0.5px;
+  text-align: left;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.mobile-data-table td {
+  font-size: 0.82rem;
+  padding: 9px 0;
+  border-bottom: 1px solid #f3f3f3;
+  color: #222222;
+}
+
+.mobile-data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.font-gold {
+  font-weight: 700;
+  color: #111111;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* ================= SECTION 3: WEALTH SOLUTIONS (MOBILE) ================= */
+.mobile-solutions-section {
+  padding: 40px 16px;
+  background-color: #ffffff;
+}
+
+.mobile-serif-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.mobile-serif-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: 0.4px;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.mobile-solutions-slider {
+  position: relative;
+  min-height: 380px;
+}
+
+.mobile-solution-card {
+  display: none;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.mobile-solution-card.active {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+.solution-img-box {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+.solution-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.solution-body {
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.solution-heading {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.solution-text {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: #333333;
+  margin-bottom: 14px;
+}
+
+.solution-checkmarks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: #222222;
+  margin-bottom: 16px;
+}
+
+.solution-link {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--citi-gold);
+  text-decoration: none;
+}
+
+.mobile-slider-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.slider-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #cbd0d6;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.slider-dot.active {
+  background-color: #111111;
+  transform: scale(1.3);
+}
+
+/* ================= SECTION 4: OFFERS & REBATES (MOBILE) ================= */
+.mobile-offers-section {
+  padding: 36px 16px;
+  background-color: #f7f8fa;
+}
+
+.mobile-section-sub {
+  font-size: 0.84rem;
+  color: #555555;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+/* Tabs Bar */
+.mobile-tabs-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  margin-top: 20px;
+  background-color: #e5e5e5;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.mobile-tab-btn {
+  padding: 12px 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #333333;
+  background-color: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-bottom: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.mobile-tab-btn.active {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+/* Disabled Tabs (Referral Rewards and Other Offers do not work) */
+.mobile-tab-btn.disabled-tab {
+  opacity: 0.45;
+  background-color: #ececec;
+  color: #888888;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.mobile-panel-inner {
+  background-color: #ffffff;
+  padding: 20px 14px;
+  border: 1px solid #d0d0d0;
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobile-mini-card {
+  background-color: #fcfcfc;
+  border: 1px solid #e8e8e8;
+  padding: 16px 14px;
+  border-radius: 4px;
+}
+
+.mini-card-badge {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.mini-card-text {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #333333;
+  margin-bottom: 8px;
+}
+
+.mini-card-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #222222;
+}
+
+.mobile-disclaimer {
+  font-size: 0.72rem;
+  color: #666666;
+  line-height: 1.45;
+  padding-top: 8px;
+}
+
+/* ================= OFFICIAL CITI FOOTER (MOBILE) ================= */
+.citi-footer-dark.mobile-footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 36px 16px 32px;
+  width: 100%;
+}
+
+.mobile-footer-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-citi-logo-box {
+  margin-bottom: 24px;
+}
+
+.footer-citi-logo-img {
+  height: 26px;
+  width: auto;
+  display: block;
+}
+
+.mobile-footer-accordions {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-footer-col {
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.mobile-footer-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.footer-chevron {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #888888;
+  border-bottom: 2px solid #888888;
+  transform: rotate(45deg);
+  transition: transform var(--transition-fast);
+}
+
+.mobile-footer-col.is-open .footer-chevron {
+  transform: rotate(225deg);
+}
+
+.mobile-footer-links {
+  display: none;
+  list-style: none;
+  padding: 0 0 16px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mobile-footer-col.is-open .mobile-footer-links {
+  display: flex;
+}
+
+.mobile-footer-links a {
+  color: #a0a6b0;
+  font-size: 0.82rem;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.mobile-footer-links a:hover {
+  color: #ffffff;
+}
+
+.citi-footer-divider {
+  height: 1px;
+  background-color: #222222;
+  margin: 28px 0 20px;
+}
+
+.mobile-footer-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.mobile-store-badges {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.mobile-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mobile-social-icons a {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.mobile-social-icons a:hover {
+  transform: translateY(-2px);
+  color: var(--citi-gold);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

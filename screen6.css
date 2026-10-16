@@ -1,0 +1,1206 @@
+/* ==========================================================================
+   CITIGOLD PRIVATE CLIENT - SCREEN 6 LANDING PAGE STYLES
+   ========================================================================== */
+
+:root {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  --citi-blue: #002d62;
+  --citi-blue-hover: #004085;
+  --citi-gold: #a48243;
+  --citi-gold-hover: #b8924d;
+  --citi-gold-light: #f7f3ea;
+  
+  --color-black: #050505;
+  --color-dark: #111111;
+  --color-charcoal: #1c2227;
+  --color-gray-dark: #2c3238;
+  --color-gray-medium: #666666;
+  --color-gray-light: #8e959d;
+  --color-gray-border: #e2e5e8;
+  --color-bg-light: #f4f6f8;
+  --color-white: #ffffff;
+  
+  --max-width: 1240px;
+  --transition-normal: 0.25s ease;
+  --transition-fast: 0.15s ease;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+}
+
+/* Reset & Global */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-dark);
+  background-color: #ffffff;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.content-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* ==========================================================================
+   SITE HEADER & NAVIGATION
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.header-top-bar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ebebeb;
+  padding: 10px 0;
+}
+
+.header-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.citi-wealth-logo-img {
+  height: 24px;
+  width: auto;
+  display: block;
+}
+
+.top-tier-tag {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #333333;
+}
+
+.main-navigation {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-container {
+  height: 54px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  height: 100%;
+}
+
+.nav-link {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #222222;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 54px;
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--citi-blue);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--citi-blue);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ask-ai-pill-box {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.ask-ai-pill-box:hover {
+  border-color: #b0b0b0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.ask-ai-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #222222;
+}
+
+.ask-ai-sep {
+  width: 1px;
+  height: 14px;
+  background-color: #dcdcdc;
+  margin: 0 8px;
+}
+
+.ask-ai-icon-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ai-circle-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-green {
+  background-color: #34a853;
+}
+
+.dot-orange {
+  background-color: #ea4335;
+}
+
+.ai-asset-icon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.btn-logon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 18px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 2px;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.btn-logon:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   SECTION 1: HERO BANNER (CPC PRIVILEGES & OFFERS)
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 540px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-color: #111111;
+}
+
+.hero-bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+}
+
+.hero-dark-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(15, 15, 17, 0.72) 0%,
+    rgba(15, 15, 17, 0.45) 45%,
+    rgba(15, 15, 17, 0.15) 100%
+  );
+}
+
+/* Stylized Left Gold Monogram "CPC" */
+.hero-cpc-monogram {
+  position: absolute;
+  left: 36px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.88;
+}
+
+.gold-cpc-text {
+  font-family: var(--font-serif);
+  font-size: clamp(6.5rem, 8.5vw, 9.5rem);
+  font-weight: 700;
+  line-height: 0.82;
+  letter-spacing: -3px;
+  color: #a48243;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  user-select: none;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content-wrapper {
+  position: relative;
+  z-index: 3;
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 70px 28px 70px 220px;
+}
+
+.hero-text-content {
+  max-width: 680px;
+  color: #ffffff;
+}
+
+.hero-kicker {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #f0f0f0;
+  margin-bottom: 14px;
+}
+
+.hero-main-title {
+  font-family: var(--font-serif);
+  font-size: 3.4rem;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-sub-title {
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  color: #ffffff;
+  line-height: 1.45;
+  margin-bottom: 28px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-sub-title strong {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.hero-btn-row {
+  margin-top: 10px;
+}
+
+.btn-hero-primary {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 13px 26px;
+  text-transform: uppercase;
+  border-radius: 1px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn-hero-primary:hover {
+  background-color: #f2f2f2;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* ==========================================================================
+   SECTION 2: VALUE PILLARS (HOW CAN CPC KEEP ADDING VALUE?)
+   ========================================================================== */
+.value-pillars-section {
+  background-color: #ffffff;
+  padding: 85px 0 75px;
+}
+
+.section-header-center {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 52px;
+}
+
+.serif-section-title {
+  font-family: var(--font-serif);
+  font-size: 2.35rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 1.2px;
+  color: #111111;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.section-lead-desc {
+  font-size: 1.02rem;
+  font-weight: 400;
+  color: #444444;
+  line-height: 1.55;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.pillar-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 4px;
+}
+
+.pillar-icon-box {
+  width: 44px;
+  height: 44px;
+  background-color: #e8ecf0;
+  color: #404852;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.pillar-card:hover .pillar-icon-box {
+  transform: translateY(-2px);
+  background-color: #dce2e8;
+  color: var(--citi-blue);
+}
+
+.pillar-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.6px;
+  color: #050505;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.pillar-desc {
+  font-size: 0.92rem;
+  color: #444444;
+  line-height: 1.55;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.pillar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: #111111;
+  text-transform: uppercase;
+  transition: gap var(--transition-fast), color var(--transition-fast);
+}
+
+.pillar-arrow {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-fast);
+}
+
+.pillar-link:hover {
+  color: var(--citi-blue);
+  gap: 12px;
+}
+
+.pillar-link:hover .pillar-arrow {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   SECTION 3: INTERACTIVE WELCOME OFFERS CALCULATOR
+   ========================================================================== */
+.calculator-section {
+  background-color: #dbe1e7;
+  padding: 80px 0 90px;
+}
+
+.calculator-header {
+  text-align: center;
+  max-width: 980px;
+  margin: 0 auto 36px;
+}
+
+.calc-eyebrow {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #333333;
+  margin-bottom: 12px;
+}
+
+.serif-calc-title {
+  font-family: var(--font-serif);
+  font-size: 2.35rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 1.2px;
+  color: #111111;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.calc-subtitle {
+  font-size: 1.02rem;
+  color: #333333;
+  line-height: 1.5;
+}
+
+/* Stepper Navigation */
+.calc-stepper-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 760px;
+  margin: 0 auto 40px;
+  gap: 16px;
+}
+
+.stepper-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.step-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #222222;
+  border: 1px solid #777777;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.stepper-item.active .step-circle {
+  background-color: #1e242a;
+  color: #ffffff;
+  border-color: #1e242a;
+}
+
+.step-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #222222;
+  white-space: nowrap;
+}
+
+.stepper-connector {
+  flex: 1;
+  height: 2px;
+  background-color: #a4abb3;
+  min-width: 40px;
+}
+
+.stepper-connector.active {
+  background-color: #1e242a;
+}
+
+/* Dual Panel Main Card */
+.calc-main-card {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+/* Left Panel */
+.calc-left-panel {
+  padding: 40px 42px 42px;
+  display: flex;
+  flex-direction: column;
+}
+
+.calc-panel-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.panel-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  gap: 18px;
+}
+
+.calc-panel-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #000000;
+  margin-bottom: 6px;
+}
+
+.calc-panel-desc {
+  font-size: 0.94rem;
+  color: #555555;
+  line-height: 1.4;
+}
+
+.panel-skyline-thumb {
+  flex-shrink: 0;
+  width: 140px;
+  overflow: hidden;
+}
+
+.skyline-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.slider-block {
+  margin-bottom: 36px;
+}
+
+.slider-input-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 12px;
+}
+
+.current-fund-amount {
+  font-size: 2.15rem;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: -0.5px;
+  margin-bottom: 18px;
+}
+
+.range-slider-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Custom Citi Range Slider */
+.citi-range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(to right, #2a3138 0%, #2a3138 66%, #cfd5dc 66%, #cfd5dc 100%);
+  outline: none;
+  margin: 12px 0 16px;
+  cursor: pointer;
+}
+
+.citi-range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #2a3138;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.citi-range-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  border-color: #000000;
+}
+
+.citi-range-slider::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #2a3138;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.slider-ticks-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+.eligibility-badge-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 34px;
+  color: #111111;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.eligibility-icon {
+  flex-shrink: 0;
+  color: #111111;
+  display: flex;
+  align-items: center;
+}
+
+.calc-action-row {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-calc-next {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 13px 28px;
+  text-transform: uppercase;
+  border-radius: 1px;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.btn-calc-next:hover {
+  background-color: #222222;
+  transform: translateY(-1px);
+}
+
+/* Right Panel: Total Cash Rebate */
+.calc-right-panel {
+  background-color: #f7f9fa;
+  border-left: 1px solid #e7ebef;
+  display: flex;
+  flex-direction: column;
+}
+
+.rebate-summary-banner {
+  background-color: #2a3138;
+  color: #ffffff;
+  padding: 32px 36px 30px;
+}
+
+.rebate-header-title {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #e2e7ec;
+  margin-bottom: 10px;
+}
+
+.rebate-hero-number {
+  font-size: 3.4rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.rebate-breakdown-list {
+  padding: 18px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.breakdown-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background-color: #ffffff;
+  border: 1px solid #eef1f4;
+  border-radius: 2px;
+  font-size: 0.92rem;
+  color: #222222;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.breakdown-row.highlight {
+  background-color: #ffffff;
+  border-color: #dce3eb;
+}
+
+.breakdown-item-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+}
+
+.breakdown-icon {
+  color: #49535d;
+  display: flex;
+  align-items: center;
+}
+
+.breakdown-item-value {
+  font-weight: 700;
+  color: #000000;
+  font-size: 0.96rem;
+}
+
+.calc-disclaimer-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 18px 26px 26px;
+  font-size: 0.8rem;
+  color: #444444;
+  line-height: 1.45;
+}
+
+.disclaimer-shield-icon {
+  flex-shrink: 0;
+  color: #333333;
+  margin-top: 1px;
+}
+
+/* ==========================================================================
+   SECTION 4: WEALTH GROWTH ADD UP TABLES
+   ========================================================================== */
+.wealth-growth-section {
+  position: relative;
+  background-color: #1a1e22;
+  overflow: hidden;
+}
+
+.growth-banner-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.growth-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  z-index: 1;
+  opacity: 0.55;
+}
+
+.growth-dark-tint {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(23, 27, 31, 0.92) 0%,
+    rgba(23, 27, 31, 0.82) 42%,
+    rgba(23, 27, 31, 0.94) 100%
+  );
+  z-index: 2;
+}
+
+.growth-container {
+  position: relative;
+  z-index: 3;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 85px 28px;
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.growth-left-col {
+  color: #ffffff;
+}
+
+.growth-icon-badge {
+  margin-bottom: 24px;
+}
+
+.growth-serif-title {
+  font-family: var(--font-serif);
+  font-size: 2.85rem;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 22px;
+}
+
+.growth-subtext {
+  font-size: 1.05rem;
+  color: #d8dde2;
+  line-height: 1.55;
+  max-width: 440px;
+}
+
+.growth-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.growth-card-table {
+  background-color: #ffffff;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
+}
+
+.cpc-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  text-align: left;
+}
+
+.cpc-data-table thead {
+  background-color: #d6d9dc;
+}
+
+.cpc-data-table th {
+  padding: 14px 20px;
+  font-weight: 700;
+  color: #111111;
+  font-size: 0.92rem;
+}
+
+.cpc-data-table td {
+  padding: 12px 20px;
+  color: #222222;
+  border-top: 1px solid #e7ebef;
+}
+
+.cpc-data-table tbody tr:hover {
+  background-color: #f7f9fb;
+}
+
+.th-align-right,
+.td-align-right {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.font-medium {
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   OFFICIAL CITI DARK FOOTER (SAME AS SCREEN 1)
+   ========================================================================== */
+.citi-footer-dark {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 56px 0 44px;
+  font-size: 0.85rem;
+  width: 100%;
+}
+
+.citi-footer-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.footer-citi-logo-box {
+  margin-bottom: 36px;
+}
+
+.footer-citi-logo-img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+.citi-footer-columns {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+  margin-bottom: 44px;
+}
+
+.citi-footer-col-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.citi-footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.citi-footer-links-list a {
+  color: #c0c5cc;
+  font-size: 0.84rem;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  line-height: 1.4;
+}
+
+.citi-footer-links-list a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.citi-footer-divider {
+  height: 1px;
+  background-color: #262626;
+  margin-bottom: 32px;
+}
+
+.citi-footer-bottom-bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.footer-app-download,
+.footer-social-follow {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-bottom-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.app-store-badges {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.store-badge-btn {
+  display: inline-block;
+  transition: opacity var(--transition-fast);
+}
+
+.store-badge-btn:hover {
+  opacity: 0.85;
+}
+
+.social-icon-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.social-link {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  color: var(--citi-gold);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (TABLET & MOBILE)
+   ========================================================================== */
+@media (max-width: 1080px) {
+  .hero-main-title {
+    font-size: 2.8rem;
+  }
+
+  .pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 28px;
+  }
+
+  .calc-main-card {
+    grid-template-columns: 1fr;
+  }
+
+  .calc-right-panel {
+    border-left: none;
+    border-top: 1px solid #e7ebef;
+  }
+
+  .growth-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .citi-footer-columns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero-cpc-monogram {
+    display: none;
+  }
+
+  .hero-content-wrapper {
+    padding: 60px 20px;
+  }
+
+  .hero-main-title {
+    font-size: 2.2rem;
+  }
+
+  .serif-section-title,
+  .serif-calc-title,
+  .growth-serif-title {
+    font-size: 1.85rem;
+  }
+
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .calc-stepper-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .stepper-connector {
+    display: none;
+  }
+
+  .calc-left-panel {
+    padding: 28px 20px;
+  }
+
+  .panel-skyline-thumb {
+    width: 100px;
+  }
+
+  .current-fund-amount {
+    font-size: 1.75rem;
+  }
+
+  .rebate-hero-number {
+    font-size: 2.6rem;
+  }
+
+  .citi-footer-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .citi-footer-bottom-bar {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .citi-footer-columns {
+    grid-template-columns: 1fr;
+  }
+}

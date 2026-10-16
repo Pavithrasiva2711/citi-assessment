@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citi Wealth Assessment | Pavithra - Candidate Showcase</title>
+  <meta name="description" content="Citigold Private Client assessment screens showcase featuring all 6 responsive screens, interactive calculators, FAQs, and mobile experiences.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #0a0b0e;
+      --card-bg: #12141a;
+      --card-border: rgba(197, 155, 76, 0.25);
+      --card-border-hover: rgba(197, 155, 76, 0.65);
+      --gold: #c59b4c;
+      --gold-light: #e0ba6a;
+      --text-main: #f5f6f8;
+      --text-muted: #9aa0ad;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(ellipse at 20% 10%, rgba(197, 155, 76, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(30, 60, 110, 0.12) 0%, transparent 50%);
+    }
+
+    /* Header */
+    header {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(10, 11, 14, 0.85);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-logo-img {
+      height: 34px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .badge-tag {
+      background: rgba(197, 155, 76, 0.15);
+      border: 1px solid rgba(197, 155, 76, 0.4);
+      color: var(--gold-light);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    /* Hero Section */
+    .hero-portal {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 60px 24px 30px;
+      text-align: center;
+    }
+
+    .portal-kicker {
+      color: var(--gold);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .portal-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 600;
+      line-height: 1.15;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .portal-desc {
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 36px;
+      font-size: 1.05rem;
+    }
+
+    .status-summary-bar {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      background: rgba(18, 20, 26, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 50px;
+      padding: 10px 28px;
+      font-size: 0.88rem;
+    }
+
+    .status-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 10px #10b981;
+    }
+
+    /* Grid Section */
+    .screens-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 30px 24px 80px;
+      flex: 1;
+    }
+
+    .screens-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 28px;
+    }
+
+    /* Screen Card */
+    .screen-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.28s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .screen-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .screen-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--card-border-hover);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5), 0 0 24px rgba(197, 155, 76, 0.12);
+    }
+
+    .screen-card:hover::before {
+      opacity: 1;
+    }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .screen-pill {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 4px 12px;
+      border-radius: 6px;
+      background: rgba(197, 155, 76, 0.12);
+      color: var(--gold-light);
+      border: 1px solid rgba(197, 155, 76, 0.28);
+    }
+
+    .screen-type-tag {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .card-title {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 22px;
+      flex: 1;
+    }
+
+    .card-meta-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .meta-tag {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+      font-size: 0.74rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn-launch {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #c59b4c 0%, #a48243 100%);
+      color: #0b0c10;
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 11px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      letter-spacing: 0.3px;
+    }
+
+    .btn-launch:hover {
+      background: linear-gradient(135deg, #d8ac5a 0%, #b8924c 100%);
+      box-shadow: 0 4px 16px rgba(197, 155, 76, 0.35);
+      color: #000;
+    }
+
+    .btn-icon {
+      width: 14px;
+      height: 14px;
+      transition: transform 0.2s ease;
+    }
+
+    .btn-launch:hover .btn-icon {
+      transform: translateX(3px);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(10, 11, 14, 0.95);
+      padding: 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .screens-grid {
+        grid-template-columns: 1fr;
+      }
+      .portal-title {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header -->
+  <header>
+    <div class="header-inner">
+      <div class="brand-group">
+        <img src="assets/icons/image 1193.png" alt="Citi Wealth" class="brand-logo-img">
+        <span class="badge-tag">Candidate: Pavithra</span>
+      </div>
+      <div class="status-item">
+        <span class="status-dot"></span>
+        <span style="font-size: 0.82rem; color: #a1a1aa;">All 6 Screens Live & Ready</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Portal -->
+  <main>
+    <section class="hero-portal">
+      <p class="portal-kicker">CITIGOLD PRIVATE CLIENT SUITE &bull; CANDIDATE: PAVITHRA</p>
+      <h1 class="portal-title">Frontend Assessment Portfolio</h1>
+      <p class="portal-desc">
+        Complete responsive implementation matching the design specification. Click any card below to launch and review that specific screen.
+      </p>
+
+      <div class="status-summary-bar">
+        <div class="status-item">
+          <span class="status-dot"></span>
+          <span>6 Complete Screens</span>
+        </div>
+        <div class="status-item">
+          <span class="status-dot"></span>
+          <span>Interactive Sliders & Calculators</span>
+        </div>
+        <div class="status-item">
+          <span class="status-dot"></span>
+          <span>Responsive Mobile & Desktop</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grid of All 6 Screens -->
+    <section class="screens-container">
+      <div class="screens-grid">
+
+        <!-- Screen 1 Card -->
+        <article class="screen-card">
+          <div class="card-content">
+            <div class="card-top">
+              <span class="screen-pill">SCREEN 1</span>
+              <span class="screen-type-tag">Desktop Landing Page</span>
+            </div>
+            <h2 class="card-title">Citigold Private Client Landing Page</h2>
+            <p class="card-desc">
+              Full desktop homepage with hero video/features, privileges showcase, tiered account comparison, and cash rebate calculator.
+            </p>
+            <div class="card-meta-list">
+              <span class="meta-tag">Hero Video</span>
+              <span class="meta-tag">Interactive Calculator</span>
+              <span class="meta-tag">Account Tiers</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="screen1.html" class="btn-launch" target="_blank" rel="noopener">
+              <span>Open Screen 1</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Screen 2 Card -->
+        <article class="screen-card">
+          <div class="card-content">
+            <div class="card-top">
+              <span class="screen-pill">SCREEN 2</span>
+              <span class="screen-type-tag">Interactive FAQ</span>
+            </div>
+            <h2 class="card-title">Frequently Asked Questions</h2>
+            <p class="card-desc">
+              Dedicated FAQ system with animated accordion categories, real-time search filtering, and smooth expand/collapse interactions.
+            </p>
+            <div class="card-meta-list">
+              <span class="meta-tag">Dynamic Accordion</span>
+              <span class="meta-tag">Instant Filter</span>
+              <span class="meta-tag">Category Tabs</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="screen2.html" class="btn-launch" target="_blank" rel="noopener">
+              <span>Open Screen 2</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Screen 3 Card -->
+        <article class="screen-card">
+          <div class="card-content">
+            <div class="card-top">
+              <span class="screen-pill">SCREEN 3</span>
+              <span class="screen-type-tag">Wealth Growth Page</span>
+            </div>
+            <h2 class="card-title">Wealth Growth & Calculator</h2>
+            <p class="card-desc">
+              In-depth wealth growth screen featuring interactive dual slider configuration, milestone calculations, and comparison data tables.
+            </p>
+            <div class="card-meta-list">
+              <span class="meta-tag">Dual Fund Sliders</span>
+              <span class="meta-tag">Milestone Logic</span>
+              <span class="meta-tag">Rebate Matrix</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="screen3.html" class="btn-launch" target="_blank" rel="noopener">
+              <span>Open Screen 3</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Screen 4 Card -->
+        <article class="screen-card">
+          <div class="card-content">
+            <div class="card-top">
+              <span class="screen-pill">SCREEN 4</span>
+              <span class="screen-type-tag">Mobile Canvas View</span>
+            </div>
+            <h2 class="card-title">Citigold Mobile Experience</h2>
+            <p class="card-desc">
+              Tailored mobile viewport container showcasing compact cards, touch-optimized swipe controls, and mobile navigation layout.
+            </p>
+            <div class="card-meta-list">
+              <span class="meta-tag">Mobile Viewport</span>
+              <span class="meta-tag">Touch Friendly</span>
+              <span class="meta-tag">Bottom Navigation</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="screen4.html" class="btn-launch" target="_blank" rel="noopener">
+              <span>Open Screen 4</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Screen 5 Card -->
+        <article class="screen-card">
+          <div class="card-content">
+            <div class="card-top">
+              <span class="screen-pill">SCREEN 5</span>
+              <span class="screen-type-tag">Standalone Onboarding</span>
+            </div>
+            <h2 class="card-title">Mobile App Onboarding Frame</h2>
+            <p class="card-desc">
+              Pure mobile app frame showcase representing the Citigold onboarding journey without standard browser chrome.
+            </p>
+            <div class="card-meta-list">
+              <span class="meta-tag">App Frame</span>
+              <span class="meta-tag">Onboarding UI</span>
+              <span class="meta-tag">Pixel-Accurate</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="screen5.html" class="btn-launch" target="_blank" rel="noopener">
+              <span>Open Screen 5</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Screen 6 Card -->
+        <article class="screen-card">
+          <div class="card-content">
+            <div class="card-top">
+              <span class="screen-pill">SCREEN 6</span>
+              <span class="screen-type-tag">Rewards & Journey</span>
+            </div>
+            <h2 class="card-title">Citi Journey & 3-Step Calculator</h2>
+            <p class="card-desc">
+              Hero banner with vertical Citi monogram, Hong Kong skyline visuals, 3-step interactive rebate calculator, and dynamic table breakdowns.
+            </p>
+            <div class="card-meta-list">
+              <span class="meta-tag">Citi Monogram</span>
+              <span class="meta-tag">3-Step Calculator</span>
+              <span class="meta-tag">Skyline Visuals</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="screen6.html" class="btn-launch" target="_blank" rel="noopener">
+              <span>Open Screen 6</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Citigold Private Client Assessment Showcase &bull; Candidate: Pavithra &bull; HTML5, Vanilla CSS &amp; JavaScript</p>
+  </footer>
+
+</body>
+</html>
